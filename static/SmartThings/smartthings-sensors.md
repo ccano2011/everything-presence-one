@@ -18,15 +18,15 @@ Temperature is the current room temperature as measured by the on-board temperat
 
 Humidity gives a humidity sensor reading in percent for the room:
 
-![SmartThings Temperature and Humidity](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-sensors-temp.jpg)
+![SmartThings Temperature and Humidity](https://ccano2011.github.io/everything-presence-one/images/smartthings-sensors-temp.jpg)
 
 Illuminance is measured from the on-board light sensor in lux. There are slots at the side of the EP1 case that allow for light to pass-through and be measured, so make sure not to obstruct these for the best readings.
 
-![SmartThings Light Sensor](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-sensors-light.jpg)
+![SmartThings Light Sensor](https://ccano2011.github.io/everything-presence-one/images/smartthings-sensors-light.jpg)
 
 ### mmWave, PIR and Occupancy
 
-![SmartThings Presence and Motion Sensors](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-sensors-presence.jpg)
+![SmartThings Presence and Motion Sensors](https://ccano2011.github.io/everything-presence-one/images/smartthings-sensors-presence.jpg)
 
 You will find a sensor called mmWave - this is the output from the mmWave sensor directly and indicates if movement is detected. The mmWave sensor has a configurable offset for the "Blind time" which we will cover below. The default blind time is 12.5 seconds, which is basically how long the sensor takes to go to an "Off" or "clear" state after motion has stopped being detected:
 
@@ -38,13 +38,13 @@ The sensor called "Presence Sensor" is a combination of the mmWave and PIR senso
 
 Click the three dots in the top right corner of the sensor from within the SmartThings app and select Settings:
 
-![SmartThings Settings](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-sensors-settings.jpg)
+![SmartThings Settings](https://ccano2011.github.io/everything-presence-one/images/smartthings-sensors-settings.jpg)
 
 ### Offsets for mmWave
 
 The mmWave sensor has 2 configurable time periods - "On Latency" and "Off Latency".
 
-On Latency configures a delay of how long motion must be detected for before the sensor will change to "detected". It's also really useful for filtering out detections from unwanted objects - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information.
+On Latency configures a delay of how long motion must be detected for before the sensor will change to "detected". It's also really useful for filtering out detections from unwanted objects - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information.
 
 Off Latency configures a delay of how long the sensor will still on detected for after motion has stopped. I would generally recommending keeping this to at least 15 seconds.
 
@@ -52,9 +52,9 @@ Off Latency configures a delay of how long the sensor will still on detected for
 
 The mmWave sensor has a configurable Sensitivity and Distance control inside of SmartThings.
 
-Sensitivity allows you to adjust how sensitive the mmWave sensor reacts to movement - this can be useful to configure in rooms where slight movements by something not Human triggers the device (this cannot filter out non Human objects like fans or pets) - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information.
+Sensitivity allows you to adjust how sensitive the mmWave sensor reacts to movement - this can be useful to configure in rooms where slight movements by something not Human triggers the device (this cannot filter out non Human objects like fans or pets) - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information.
 
-Distance allows you to adjust the max range of the sensor, up to a maximum of 8m. Please note that 8m is the max range, but doesn't nessecarily mean the sensor is capable of detecting the tiniest of movements at 8m - placement is still important for the best results - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information.
+Distance allows you to adjust the max range of the sensor, up to a maximum of 8m. Please note that 8m is the max range, but doesn't nessecarily mean the sensor is capable of detecting the tiniest of movements at 8m - placement is still important for the best results - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information.
 
 ### Turning off LEDs
 

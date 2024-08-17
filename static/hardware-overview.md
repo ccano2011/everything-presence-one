@@ -85,7 +85,7 @@ The Panasonic EKMC series of sensor is the **only** compatible and validated sen
 
 Now we have familiarised ourselves with the hardware, let's get the hardware assembled and ready to setup!
 
-[Assembly](http://everythingsmarthome.github.io/everything-presence-one/assembly.html){: .btn .btn-blue }
+[Assembly](http://ccano2011.github.io/everything-presence-one/assembly.html){: .btn .btn-blue }
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
