@@ -31,9 +31,6 @@ esp32:
 
 logger:
 
-ota:
-  - platform: esphome
-
 web_server:
 
 wifi:
@@ -46,7 +43,7 @@ improv_serial:
 
 esp32_improv:
   authorizer: none
-  
+
 light:
   - platform: status_led
     name: "ESP32 Status LED"
@@ -114,7 +111,6 @@ sensor:
             - 84.3 -> 205.7
       - clamp:
           min_value: 0
-
 
 binary_sensor:
   - platform: gpio
@@ -341,7 +337,7 @@ button:
   - platform: restart
     name: Restart_internal
     id: restart_internal
-    entity_category: config 
+    entity_category: config
     internal: true
   - platform: template
     name: "Restart mmWave Sensor"

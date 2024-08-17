@@ -4,7 +4,7 @@ esphome:
   name_add_mac_suffix: true
   project:
     name: ${project_name}
-    version: ${project_version} 
+    version: ${project_version}
   on_boot:
     priority: -100
     then:
@@ -20,15 +20,6 @@ logger:
   level: ${log_level}
 
 api:
-
-ota:
-  - platform: esphome
-    id: ota_esphome
-  - platform: http_request
-    id: ota_http_request
-
-http_request:
-  timeout: 4s
 
 wifi:
   fast_connect: ${hidden_ssid}
@@ -106,7 +97,7 @@ sensor:
             - 63.8 -> 157.6
             - 71.5 -> 176.9
             - 79.8 -> 197.1
-            - 84.3 -> 205.7 
+            - 84.3 -> 205.7
       - lambda: "return x + id(illuminance_offset_ui).state;"
       - clamp:
           min_value: 0
@@ -120,15 +111,15 @@ binary_sensor:
     id: pir_motion_sensor
     device_class: motion
     filters:
-      - delayed_off:  !lambda 'return id(pir_off_latency).state * 1000.0;'
+      - delayed_off: !lambda "return id(pir_off_latency).state * 1000.0;"
   - platform: template
     name: Occupancy
     id: occupancy
     device_class: occupancy
     filters:
-      - delayed_off: !lambda 'return id(occupancy_off_latency).state * 1000.0;'
+      - delayed_off: !lambda "return id(occupancy_off_latency).state * 1000.0;"
     on_state:
-      - lambda: 'id(illuminance_sensor).update();'
+      - lambda: "id(illuminance_sensor).update();"
     lambda: |-
       if ( id(mmwave).state or id(pir_motion_sensor).state) {
         return true;
@@ -184,7 +175,7 @@ number:
     icon: "mdi:thermometer"
     entity_category: config
     on_value:
-      - lambda: 'id(shtc3_sensor).update();'
+      - lambda: "id(shtc3_sensor).update();"
   - platform: template
     name: "Humidity Offset"
     id: humidity_offset_ui
@@ -200,7 +191,7 @@ number:
     icon: "mdi:water-percent"
     entity_category: config
     on_value:
-      - lambda: 'id(shtc3_sensor).update();'
+      - lambda: "id(shtc3_sensor).update();"
   - platform: template
     name: "Illuminance Offset"
     id: illuminance_offset_ui
@@ -216,7 +207,7 @@ number:
     icon: "mdi:brightness-5"
     entity_category: config
     on_value:
-      - lambda: 'id(illuminance_sensor).update();'
+      - lambda: "id(illuminance_sensor).update();"
 
 button:
   - platform: restart
