@@ -13,11 +13,11 @@ substitutions:
   uart_presence_output_disabled: "true"
   log_level: "ERROR"
 
-update:
-  - platform: http_request
-    id: update_http_request
-    name: Firmware
-    source: https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-ble-manifest.json
+# update:
+#   - platform: http_request
+#     id: update_http_request
+#     name: Firmware
+#     source: https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-ble-manifest.json
 
 dashboard_import:
   package_import_url: github://ccano2011/everything-presence-one/everything-presence-one-sen0609-ble.yaml@main
