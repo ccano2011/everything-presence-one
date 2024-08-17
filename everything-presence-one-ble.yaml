@@ -20,7 +20,7 @@ substitutions:
 #     source: https://ccano2011.github.io/everything-presence-one/everything-presence-one-ble-manifest.json
 
 dashboard_import:
-  package_import_url: github://ccano2011/everything-presence-one/everything-presence-one-ble.yaml@main
+  package_import_url: github://ccano2011/everything-presence-one/everything-presence-one-ble.yaml@cano-test
   import_full_config: false
 
 packages:
