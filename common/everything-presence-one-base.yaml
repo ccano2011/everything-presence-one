@@ -21,15 +21,6 @@ logger:
 
 api:
 
-ota:
-  - platform: esphome
-    id: ota_esphome
-  - platform: http_request
-    id: ota_http_request
-
-http_request:
-  timeout: 4s
-
 wifi:
   fast_connect: ${hidden_ssid}
 
@@ -223,8 +214,8 @@ button:
     id: restart_internal
     entity_category: config
     internal: true
-  - platform: safe_mode
-    internal: false
-    name: Safe mode
-    entity_category: config
-    disabled_by_default: True
+  # - platform: safe_mode
+  #   internal: false
+  #   name: Safe mode
+  #   entity_category: config
+  #   disabled_by_default: True
