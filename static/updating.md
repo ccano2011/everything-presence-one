@@ -160,8 +160,8 @@ After clicking the "Connect" button, if you do not see a "USB Serial" port liste
 
 With the EP1 fully updated and connected to WiFi, the final step is to connect it to Home Assistant or Samsung Smartthings (Beta)!
 
-[Connecting to Home Assistant](https://everythingsmarthome.github.io/everything-presence-one/Home%20Assistant/connecting-home-assistant.html){: .btn .btn-blue }
-[Connecting to SmartThings](https://everythingsmarthome.github.io/everything-presence-one/SmartThings/smartthings-driver.html){: .btn .btn-blue }
+[Connecting to Home Assistant](https://ccano2011.github.io/everything-presence-one/Home%20Assistant/connecting-home-assistant.html){: .btn .btn-blue }
+[Connecting to SmartThings](https://ccano2011.github.io/everything-presence-one/SmartThings/smartthings-driver.html){: .btn .btn-blue }
 
 <script
   type="module"
@@ -252,30 +252,30 @@ document.addEventListener("DOMContentLoaded", function() {
     if (platform === "Home Assistant") {
         if (sensorModel === "DFRobot SEN0395") {
             if (firmware === "Bluetooth - Stable") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-ble-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-ble-manifest.json";
             } else if (firmware === "Bluetooth - Beta") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-ha-ble-beta-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-ha-ble-beta-manifest.json";
             } else if (firmware === "No-Bluetooth - Stable") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-manifest.json";
             } else if (firmware === "No-Bluetooth - Beta") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-ha-beta-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-ha-beta-manifest.json";
             }
         } else if (sensorModel === "DFRobot SEN0609") {
             if (firmware === "Bluetooth - Stable") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-sen0609-ble-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-ble-manifest.json";
             } else if (firmware === "No-Bluetooth - Stable") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-sen0609-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-manifest.json";
             } else if (firmware === "Bluetooth - Beta") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-sen0609-ble-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-ble-manifest.json";
             } else if (firmware === "No-Bluetooth - Beta") {
-                manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-sen0609-manifest.json";
+                manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-manifest.json";
             }
         }
     } else if (platform === "Smartthings") {
         if (sensorModel === "DFRobot SEN0395") {
-            manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-st-manifest.json";
+            manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-st-manifest.json";
         } else if (sensorModel === "DFRobot SEN0609") {
-            manifestUrl = "https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-sen0609-st-manifest.json";
+            manifestUrl = "https://ccano2011.github.io/everything-presence-one/everything-presence-one-sen0609-st-manifest.json";
         }
     }
     return manifestUrl;

@@ -43,7 +43,7 @@ wifi:
 captive_portal:
 
 improv_serial:
-  
+
 light:
   - platform: status_led
     name: "ESP32 Status LED"
@@ -111,7 +111,6 @@ sensor:
             - 84.3 -> 205.7
       - clamp:
           min_value: 0
-
 
 binary_sensor:
   - platform: gpio
@@ -259,8 +258,7 @@ number:
     set_action:
       - switch.turn_off: mmwave_sensor
       - delay: 1s
-      - uart.write: !lambda
-          int min = id(mmwave_min_distance).state / 100;
+      - uart.write: !lambda int min = id(mmwave_min_distance).state / 100;
           int max = id(mmwave_distance).state / 100;
           std::string ms = "setRange " + to_string(min) + " " + to_string(max);
           return std::vector<unsigned char>(ms.begin(), ms.end());
@@ -283,8 +281,7 @@ number:
     set_action:
       - switch.turn_off: mmwave_sensor
       - delay: 1s
-      - uart.write: !lambda
-          int min = id(mmwave_min_distance).state / 100;
+      - uart.write: !lambda int min = id(mmwave_min_distance).state / 100;
           int max = id(mmwave_distance).state / 100;
           std::string ms = "setRange " + to_string(min) + " " + to_string(max);
           return std::vector<unsigned char>(ms.begin(), ms.end());
@@ -355,8 +352,7 @@ number:
     set_action:
       - switch.turn_off: mmwave_sensor
       - delay: 1s
-      - uart.write: !lambda
-          std::string ms = "setRangeReduced " + to_string(x);
+      - uart.write: !lambda std::string ms = "setRangeReduced " + to_string(x);
           return std::vector<unsigned char>(ms.begin(), ms.end());
       - delay: 1s
       - uart.write: "saveConfig"
@@ -410,7 +406,7 @@ button:
   - platform: restart
     name: Restart_internal
     id: restart_internal
-    entity_category: config 
+    entity_category: config
     internal: true
   - platform: template
     name: "Restart mmWave Sensor"
@@ -425,10 +421,6 @@ button:
     on_press:
       - button.press: restart_mmwave
       - button.press: restart_internal
-  - platform: safe_mode
-    internal: false
-    name: $name Safe Mode
-    entity_category: config
   - platform: template
     name: "Factory Reset mmWave"
     id: "factory_reset_mmwave"

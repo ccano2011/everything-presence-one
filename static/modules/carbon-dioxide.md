@@ -19,11 +19,11 @@ Please note the CO2 module is only compatible with Home Assistant and not SmartT
 
 First take your EP1 (with it powered off!) and identify the GPIO pins in the bottom corner (depending on your board your revision, these may look slightly different):
 
-![Everything Presence One GPIO Pins](https://everythingsmarthome.github.io/everything-presence-one/images/everything-presence-one-gpio-pins.jpg)
+![Everything Presence One GPIO Pins](https://ccano2011.github.io/everything-presence-one/images/everything-presence-one-gpio-pins.jpg)
 
 Grab your CO2 module and push it onto the pins, making sure to line up the 3.3v and Ground pins:
 
-![Everything Presence One CO2 placement](https://everythingsmarthome.github.io/everything-presence-one/images/everything-presence-co2-scd40-one.jpg)
+![Everything Presence One CO2 placement](https://ccano2011.github.io/everything-presence-one/images/everything-presence-co2-scd40-one.jpg)
 
 ## Software
 

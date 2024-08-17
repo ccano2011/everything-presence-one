@@ -20,19 +20,19 @@ First, [click this link](https://bestow-regional.api.smartthings.com/invite/adMK
 
 Make sure you are logged into your Samsung account.
 
-![SmartThings Accept Driver](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-driver-accept-terms-1.png)
+![SmartThings Accept Driver](https://ccano2011.github.io/everything-presence-one/images/smartthings-driver-accept-terms-1.png)
 
 Hit the Accept button to add the EP1 Driver to your account and then hit the Enroll button:
 
-![SmartThings Accept Driver](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-driver-accept-terms-2.png)
+![SmartThings Accept Driver](https://ccano2011.github.io/everything-presence-one/images/smartthings-driver-accept-terms-2.png)
 
 Then hit the available drivers button:
 
-![SmartThings Accept Driver](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-driver-accept-terms-3.png)
+![SmartThings Accept Driver](https://ccano2011.github.io/everything-presence-one/images/smartthings-driver-accept-terms-3.png)
 
 And finally hit the install button:
 
-![SmartThings Accept Driver](https://everythingsmarthome.github.io/everything-presence-one/images/smartthings-driver-accept-terms-4.png)
+![SmartThings Accept Driver](https://ccano2011.github.io/everything-presence-one/images/smartthings-driver-accept-terms-4.png)
 
 {: .note }
 It may take up to 24 hours for the driver to appear in your SmartThings Hub. This is a feature of the SmartThings Platform.
@@ -41,4 +41,4 @@ It may take up to 24 hours for the driver to appear in your SmartThings Hub. Thi
 
 Now the SmartThings driver has been installed, we can now add the EP1 to SmartThings!
 
-[Connecting to SmartThings](http://everythingsmarthome.github.io/everything-presence-one/connecting-smartthings.html){: .btn .btn-blue }
+[Connecting to SmartThings](http://ccano2011.github.io/everything-presence-one/connecting-smartthings.html){: .btn .btn-blue }

@@ -7,12 +7,12 @@ on:
     branches:
       - main
     paths:
-      - '**.yaml'
+      - "**.yaml"
 
 jobs:
   publish-everything-presence-one-no-ble-stable:
     name: Publish Everything Presence One - HA - Stable
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one.yaml
       name: Everything Presence One - HA - Stable
@@ -22,7 +22,7 @@ jobs:
       directory_name: everything-presence-one-esp32
   publish-everything-presence-one-ble-stable:
     name: Publish Everything Presence One - HA - BLE - Stable
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-ble.yaml
       name: Everything Presence One - HA - BLE - Stable
@@ -32,7 +32,7 @@ jobs:
       directory_name: everything-presence-one-ble-esp32
   publish-everything-presence-one-smartthings:
     name: Publish Everything Presence One - SmartThings
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-st.yaml
       name: Everything Presence One - SmartThings
@@ -42,7 +42,7 @@ jobs:
       directory_name: everything-presence-st-esp32
   publish-everything-presence-one-sen0609-smartthings:
     name: Publish Everything Presence One - SEN0609 - SmartThings
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-st-sen0609.yaml
       name: Everything Presence One - SEN0609 - SmartThings
@@ -52,7 +52,7 @@ jobs:
       directory_name: everything-presence-sen0609-st-esp32
   publish-everything-presence-one-ha-beta:
     name: Publish Everything Presence One - HA - Beta
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-beta.yaml
       name: Everything Presence One - HA - Beta
@@ -62,7 +62,7 @@ jobs:
       directory_name: everything-presence-one-beta-esp32
   publish-everything-presence-one-ha-ble-beta:
     name: Publish Everything Presence One - HA - BLE - Beta
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-beta-ble.yaml
       name: Everything Presence One - HA - BLE - Beta
@@ -72,7 +72,7 @@ jobs:
       directory_name: everything-presence-one-ble-beta-esp32
   publish-everything-presence-one-sen0609-no-ble-stable:
     name: Publish Everything Presence One - SEN0609 - HA - Stable
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-sen0609.yaml
       name: Everything Presence One - SEN0609 - HA - Stable
@@ -82,7 +82,7 @@ jobs:
       directory_name: everything-presence-one-sen0609-esp32
   publish-everything-presence-one-sen0609-ble-stable:
     name: Publish Everything Presence One - SEN0609 - HA - BLE - Stable
-    uses: EverythingSmartHome/everything-presence-lite/.github/workflows/esphome-build.yml@main
+    uses: ccano2011/everything-presence-lite/.github/workflows/esphome-build.yml@main
     with:
       files: everything-presence-one-sen0609-ble.yaml
       name: Everything Presence One - SEN0609 - HA - BLE - Stable

@@ -7,7 +7,7 @@ nav_order: 1
 ![Everything Presence One](images/assembly-complete.jpg)
 
 {: .warning-title }
-Make sure to update your EP1 to the latest firmware that fixes known issues by [Updating](https://everythingsmarthome.github.io/everything-presence-one/updating.html){: .btn .btn-blue }
+Make sure to update your EP1 to the latest firmware that fixes known issues by [Updating](https://ccano2011.github.io/everything-presence-one/updating.html){: .btn .btn-blue }
 
 Welcome to the documentation for the Everything Presence One!
 
@@ -15,4 +15,4 @@ This documentation will guide you through the hardware, setup and installation o
 
 Let's get started with the hardware unboxing and preperation first!
 
-[Hardware Overview](http://everythingsmarthome.github.io/everything-presence-one/hardware-overview.html){: .btn .btn-blue }
+[Hardware Overview](http://ccano2011.github.io/everything-presence-one/hardware-overview.html){: .btn .btn-blue }
