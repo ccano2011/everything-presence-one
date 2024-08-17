@@ -18,39 +18,39 @@ After adding the EP1 to Home Assistant, you may wonder which sensors you can use
 
 To view all of the sensors and entities, click on the device from the ESPHome menu:
 
-![Home Assistant Device menu](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-devices.png)
+![Home Assistant Device menu](https://ccano2011.github.io/everything-presence-one/images/home-assistant-devices.png)
 
 This will show you a dashboard of all of the sensors and controls inside of Home Assistant that you can use in your Automations:
 
-![All Home Assistant Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-overview.png)
+![All Home Assistant Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-overview.png)
 
 ### Temperature, Humidity and Illuminance
 
 Temperature is the current room temperature as measured by the on-board temperature sensor and is given in celsius. This sensor supports a configureable offset allowing you to adjust the reading. See the advanced section for how to do that.
 
-![Home Assistant Temperature Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-temperature.jpg)
+![Home Assistant Temperature Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-temperature.jpg)
 
 Humidity gives a humidity sensor reading in percent for the room:
 
-![Home Assistant Humidity Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-humidity.jpg)
+![Home Assistant Humidity Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-humidity.jpg)
 
 Illuminance is measured from the on-board light sensor in lux. There are slots at the side of the EP1 case that allow for light to pass-through and be measured, so make sure not to obstruct these for the best readings.
 
-![Home Assistant Illuminance Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-illuminance.jpg)
+![Home Assistant Illuminance Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-illuminance.jpg)
 
 Temperature, Humidity and Illuminance all support configurable offsets using the UI (if you don't see these entities, make sure to update to v1.16 or higher) which allows you to offset the reported value on the fly to calibrate each of these sensors for your environment. You can do that with these highlighted controls under the configuration section:
 
-![Home Assistant Offset Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-offset-controls.png)
+![Home Assistant Offset Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-offset-controls.png)
 
 ### mmWave, PIR and Occupancy
 
 You will find a sensor called mmWave - this is the output from the mmWave sensor directly and indicates if movement is detected. The mmWave sensor has a configurable offset for the "Blind time" which we will cover below. The default blind time is 12.5 seconds, which is basically how long the sensor takes to go to an "Off" or "clear" state after motion has stopped being detected:
 
-![Home Assistant mmWave Sensor Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-mmwave.jpg)
+![Home Assistant mmWave Sensor Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-mmwave.jpg)
 
 The PIR sensor indicates if motion was detected or not. It also has a user configurable timeout period, which by default is 10 seconds. This means that it will take 10 seconds after the last motion for the PIR sensor to go back to the "Off" or "Clear" state:
 
-![Home Assistant PIR Sensor Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-pir.jpg)
+![Home Assistant PIR Sensor Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-pir.jpg)
 
 Occupancy is a combination of the mmWave and PIR sensor. If **either** the mmWave or PIR sensor detects motion, Occupancy will be "On" or "Detected". Both the mmWave and PIR sensor must be clear before Occupancy will change to the "Off" or "Clear" state. This is the sensor that you will generally want to use in your Automations. This also has a user configurable timeout period.
 
@@ -60,9 +60,9 @@ All 3 sensors have configurable timeout periods that can be set, which allows yo
 
 The mmWave sensor has an adjustable timeout period inside of Home Assistant using the mmWave Off Latency control. The value is measured in ms and the default is for 12500ms (12.5 seconds). I generally wouldn't recommend setting this below 10s.
 
-![Home Assistant mmWave Offset Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-mmwave-offset.jpg)
+![Home Assistant mmWave Offset Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-mmwave-offset.jpg)
 
-On Latency configures a delay of how long motion must be detected for before the sensor will change to "detected". It's also really useful for filtering out detections from unwanted objects - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information.
+On Latency configures a delay of how long motion must be detected for before the sensor will change to "detected". It's also really useful for filtering out detections from unwanted objects - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information.
 
 The PIR and Occupancy sensor off-time needs to be configured with ESPHome code due to ESPHome not supporting dynamic values for these in code. See the Advanced page for how to edit the ESPHome code.
 
@@ -70,23 +70,23 @@ The PIR and Occupancy sensor off-time needs to be configured with ESPHome code d
 
 The SEN0395 mmWave sensor has a configurable Sensitivity and Distance control inside of Home Assistant.
 
-Sensitivity allows you to adjust how sensitive the mmWave sensor reacts to movement - this can be useful to configure in rooms where slight movements by something not Human triggers the device (this cannot filter out non Human objects like fans or pets) - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information:
+Sensitivity allows you to adjust how sensitive the mmWave sensor reacts to movement - this can be useful to configure in rooms where slight movements by something not Human triggers the device (this cannot filter out non Human objects like fans or pets) - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information:
 
-![Home Assistant mmWave sensitivity Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-mmwave-sensitivity.jpg)
+![Home Assistant mmWave sensitivity Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-mmwave-sensitivity.jpg)
 
-Distance allows you to adjust the max range of the sensor, up to a maximum of 8m. Please note that 8m is the max range, but doesn't nessecarily mean the sensor is capable of detecting the tiniest of movements at 8m - placement is still important for the best results - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information:
+Distance allows you to adjust the max range of the sensor, up to a maximum of 8m. Please note that 8m is the max range, but doesn't nessecarily mean the sensor is capable of detecting the tiniest of movements at 8m - placement is still important for the best results - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information:
 
-![Home Assistant mmWave distance Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-mmwave-distance.jpg)
+![Home Assistant mmWave distance Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-mmwave-distance.jpg)
 
 ### Distance and Sensitivity (SEN0609)
 
 The newer SEN0609 mmWave sensor has 2 individual controls for sensitivity and 3 individual controls for distance inside of Home Assistant.
 
-Sensitivity allows you to adjust how sensitive the mmWave sensor reacts to movement - this can be useful to configure in rooms where slight movements by something not Human triggers the device (this cannot filter out non Human objects like fans or pets) - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information.
+Sensitivity allows you to adjust how sensitive the mmWave sensor reacts to movement - this can be useful to configure in rooms where slight movements by something not Human triggers the device (this cannot filter out non Human objects like fans or pets) - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information.
 
 The SEN0609 has 2 controls for sensitivity - Sustained Sensitivity and Trigger Sensitivity:
 
-![Home Assistant mmWave sensitivity Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-sen0609-mmwave-sensitivity.png)
+![Home Assistant mmWave sensitivity Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-sen0609-mmwave-sensitivity.png)
 
 Trigger Sensitivity allows you to configure the sensitivity level to do the initial trigger of the sensor (to make it go from clear to detected). This is on a scale of 1-9, where 1 is the lowest sensitivity and 9 is the highest.
 
@@ -97,11 +97,11 @@ One scenario this can be useful, would be to prevent a small movement triggering
 {: .important }
 You MUST press the "Set Sensitivity" button in order to send the senstivity settings to the sensor after changing the sliders. No change will take effect without pressing this.
 
-Distance allows you to adjust the max range of the sensor, up to a maximum of 25m. Please note that 25m is the max range, but doesn't nessecarily mean the sensor is capable of detecting the tiniest of movements at 25m - placement is still important for the best results - see the [tuning guide](https://everythingsmarthome.github.io/everything-presence-one/tuning.html) for more information.
+Distance allows you to adjust the max range of the sensor, up to a maximum of 25m. Please note that 25m is the max range, but doesn't nessecarily mean the sensor is capable of detecting the tiniest of movements at 25m - placement is still important for the best results - see the [tuning guide](https://ccano2011.github.io/everything-presence-one/tuning.html) for more information.
 
 The SEN0609 has 3 controls for distance too - minimum Distance, maximum distance and range reduced:
 
-![Home Assistant mmWave distance Entity](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-sen0609-mmwave-distance.png)
+![Home Assistant mmWave distance Entity](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-sen0609-mmwave-distance.png)
 
 Minimum and maximum are pretty self explanatory - they allow you to set the operating distance for the mmwave sensor, so that only movement that is within these two values will be considered occupied. For example, if you have the minimum value as 3m, and the maximum value as 6m, then only movement that occurs between 3m and 6m will cause the sensor to trigger.
 
@@ -124,19 +124,19 @@ Distance zones work by defining a start and an end distance for each zone. By se
 
 By default, only one zone is an enabled entity in Home Assistant, so as to not overwhelm new users:
 
-![Home Assistant Distance Zone 1 Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-distance-zone-1.jpg)
+![Home Assistant Distance Zone 1 Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-distance-zone-1.jpg)
 
  If you would like to enable zones 2, 3 and 4, simply click on the entities not shown message:
 
-![Home Assistant Distance Zone Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-distance-entities-not-shown.png)
+![Home Assistant Distance Zone Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-distance-entities-not-shown.png)
 
 To reveal entities that are disabled by default:
 
-![Home Assistant Disabled Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-disabled-reveal.png)
+![Home Assistant Disabled Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-disabled-reveal.png)
 
 Click the entity you want to enable, then click the settings icon in the right hand corner of the popup. Then enable the entity:
 
-![Home Assistant Enabling Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-enabling-toggle.png)
+![Home Assistant Enabling Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-enabling-toggle.png)
 
 Wait 30 seconds, refresh the page and the entity is now enabled. Repeat this for each entity you want to enable (start and end zone for example).
 
@@ -153,7 +153,7 @@ You MUST then hit the "set distance" button in the UI for these zones to take ef
 
 If you make a mistake configuring the zones, the sensor won't accept the value and nothing will change, but the UI sliders will indicate it has, making it difficult to know. This is a beta/advanced feature so I do want to improve the feedback from the sensor for this to make it more obvious if something didn't work, but there is a text sensor that will update to show you if the zones were sent correctly or not:
 
-![Home Assistant Enabling Entities](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-distance-status.png)
+![Home Assistant Enabling Entities](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-distance-status.png)
 
 The numbers in the error message are "segments" of the distance set above. The first number is zone 1 start, second number is zone 1 end, third number is zone 2 start, fourth is zone 2 end and so on. These numbers can be multiplied by 15 to get the value in cm, corresponding to what you set in the sliders. Confusing/complicated I know, working on it.
 
@@ -163,7 +163,7 @@ The EP1 has two LED's that will be visible, both of which can be turned off.
 
 The mmWave LED disables the LED on the mmWave sensor itself which flashes when in use and the ESP32 Status LED disables the LED on the EP1 board:
 
-![Home Assistant LED Controls](https://everythingsmarthome.github.io/everything-presence-one/images/home-assistant-entities-led-controls.jpg)
+![Home Assistant LED Controls](https://ccano2011.github.io/everything-presence-one/images/home-assistant-entities-led-controls.jpg)
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
