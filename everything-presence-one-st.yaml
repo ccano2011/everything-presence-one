@@ -352,10 +352,6 @@ button:
     on_press:
       - button.press: restart_mmwave
       - button.press: restart_internal
-  - platform: safe_mode
-    internal: false
-    name: $name Safe Mode
-    entity_category: config
   - platform: template
     name: "Factory Reset mmWave"
     id: "factory_reset_mmwave"
